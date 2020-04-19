@@ -1,0 +1,400 @@
+<html>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Sriracha&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="portfolio.css" />
+
+  <head>
+    <div class="container">
+      <div class="text"></div>
+    </div>
+
+    <a href="page/realisation.html">
+    <div class="lien">
+      <p>Mes réalisations<p>
+    </div>
+  </a>
+
+    <div class="hover14 column">
+      <a href="page/realisation.html"><div class="realisation">
+        <figure><img src="image/realisation.png" /></figure>
+      </div></a>
+    </div>
+
+
+
+    <a href="page/presentation.html">
+    <div class="presentation">
+      <img src="image/presentation.png">
+      <p>Ma présentation<p>
+    </div></a>
+
+
+    <div class="contact">
+      <p>Contactez-moi !<p>
+    </div>
+
+    <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {opacity: 0.7;}
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+      backdrop-filter: url(commonfilters.svg#filter);
+      backdrop-filter: blur(2px);
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 300px;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content, #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)}
+      to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+      from {transform:scale(0)}
+      to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+    </style>
+
+
+
+    <img id="myImg" class="contact" src="image/contact2.png" alt="<h1>Phone : (+33) 6 XX XX XX XX <br><br> Email : fares.cherif@etu.unilim.fr<h1>" style="width:7%">
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    </script>
+
+
+
+
+
+
+    <script>"use strict";
+
+function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+
+function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+// ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
+var TextScramble = /*#__PURE__*/function () {
+  function TextScramble(el) {
+    _classCallCheck(this, TextScramble);
+
+    this.el = el;
+    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+    this.update = this.update.bind(this);
+  }
+
+  _createClass(TextScramble, [{
+    key: "setText",
+    value: function setText(newText) {
+      var _this = this;
+
+      var oldText = this.el.innerText;
+      var length = Math.max(oldText.length, newText.length);
+      var promise = new Promise(function (resolve) {
+        return _this.resolve = resolve;
+      });
+      this.queue = [];
+
+      for (var i = 0; i < length; i++) {
+        var from = oldText[i] || '';
+        var to = newText[i] || '';
+        var start = Math.floor(Math.random() * 40);
+        var end = start + Math.floor(Math.random() * 40);
+        this.queue.push({
+          from: from,
+          to: to,
+          start: start,
+          end: end
+        });
+      }
+
+      cancelAnimationFrame(this.frameRequest);
+      this.frame = 0;
+      this.update();
+      return promise;
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      var output = '';
+      var complete = 0;
+
+      for (var i = 0, n = this.queue.length; i < n; i++) {
+        var _this$queue$i = this.queue[i],
+            from = _this$queue$i.from,
+            to = _this$queue$i.to,
+            start = _this$queue$i.start,
+            end = _this$queue$i.end,
+            char = _this$queue$i.char;
+
+        if (this.frame >= end) {
+          complete++;
+          output += to;
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar();
+            this.queue[i].char = char;
+          }
+
+          output += "<span class=\"dud\">".concat(char, "</span>");
+        } else {
+          output += from;
+        }
+      }
+
+      this.el.innerHTML = output;
+
+      if (complete === this.queue.length) {
+        this.resolve();
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update);
+        this.frame++;
+      }
+    }
+  }, {
+    key: "randomChar",
+    value: function randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)];
+    }
+  }]);
+
+  return TextScramble;
+}(); // ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+
+var phrases = ['Bonjour à toi, bienvenue sur mon portfolio', 'Tu t\'appretes à commencer un voyage', 'À la découverte', 'D\'un homme', 'D\'un geek', 'D\'un développeur ...', 'Son parcours','Ses réalisations','Viens donc les découvrir ! '];
+var el = document.querySelector('.text');
+var fx = new TextScramble(el);
+var counter = 0;
+
+var next = function next() {
+  fx.setText(phrases[counter]).then(function () {
+    setTimeout(next, 2000);
+  });
+  counter = (counter + 1) % phrases.length;
+};
+
+next();
+    </script>
+  </head>
+  <header>
+
+  </header>
+
+  <body>
+
+    <h1 class="ml7">
+    <span class="text-wrapper">
+      <span class="letters"> Fares CHERIF</span>
+    </span>
+  </h1>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <div class="metier">
+    <a>Software Developper</a>
+  </div>
+  </body>
+
+  <footer>
+    <div class="suivezmoi">
+    <p>Suivez-moi !</p>
+    </div>
+    <div class="image">
+    <a href="https://twitter.com/CherifFares2"><img src="image/twitter.png"></a>
+    <a href="https://github.com/FaresCherif"><img src="image/github.png"></a>
+    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_top_card%3BxxJid2rLT%2BiLgTcAcwpVuA%3D%3D"><img src="image/linkedin.png"></a>
+    <a href="https://www.instagram.com/cherif_fares_pro/"><img src="image/insta.png"></a>
+    <a href="https://www.facebook.com/fares.cherif.7923"><img src="image/facebook.png"></a>
+  </div>
+  </footer>
+
+
+  <script>// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+.add({
+  targets: '.ml7 .letter',
+  translateY: ["1.1em", 0],
+  translateX: ["0.55em", 0],
+  translateZ: 0,
+  rotateZ: [180, 0],
+  duration: 750,
+  easing: "easeOutExpo",
+  delay: (el, i) => 100 * i
+});
+</script>
+
+
+<div class="loader loader--active">
+    <div class="loader__icon"><svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path><path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0C22.32,8.481,24.301,9.057,26.013,10.047z"></path><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite"></animateTransform></svg></div>
+    <div
+        class="loader__tile"></div>
+<div class="loader__tile"></div>
+<div class="loader__tile"></div>
+<div class="loader__tile"></div>
+<div class="loader__tile"></div>
+</div>
+<div class="wrapper"></div>
+
+<script>
+var $loader = document.querySelector('.loader')
+
+window.onload = function() {
+  $loader.classList.remove('loader--active')
+};
+
+document.querySelector('.btn').addEventListener('click', function () {
+  $loader.classList.add('loader--active')
+
+  window.setTimeout(function () {
+    $loader.classList.remove('loader--active')
+  }, 5000)
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
