@@ -141,7 +141,7 @@ footer img:hover{
 
 .lien{
   position: absolute;
-  bottom:35px;
+  bottom:0px;
   left : 50%;
 }
 
@@ -154,6 +154,12 @@ footer img:hover{
   left:30%;
   bottom:0%;
 }
+
+.realisation img{
+  width:100px;
+
+}
+
 
 p{
   margin-left: -40px;
