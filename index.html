@@ -1,6 +1,6 @@
 <html>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Comic+Neue%7CPlayfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="portfolio.css" />
 
   <head>
@@ -127,7 +127,7 @@
 
 
 
-    <img id="myImg" class="contact" src="image/contact2.png" alt="<h1>Phone : (+33) 6 XX XX XX XX <br><br> Email : fares.cherif@etu.unilim.fr<h1>" style="width:7%">
+    <img id="myImg" class="contact" src="image/contact2.png" alt="<h1>Phone : (+33) 6 62 35 77 07 <br><br> Email : fares.cherif@etu.unilim.fr<br><br>Localisation : LIMOGES (87000)</h1>" style="width:7%">
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -147,7 +147,7 @@
     var captionText = document.getElementById("caption");
     img.onclick = function(){
       modal.style.display = "block";
-      modalImg.src = this.src;
+      modalImg.src = "image/photo.jpg";
       captionText.innerHTML = this.alt;
     }
 
@@ -268,7 +268,7 @@ var TextScramble = /*#__PURE__*/function () {
 // ——————————————————————————————————————————————————
 
 
-var phrases = ['Bonjour à toi, bienvenue sur mon portfolio', 'Tu t\'appretes à commencer un voyage', 'À la découverte', 'D\'un homme', 'D\'un geek', 'D\'un développeur ...', 'Son parcours','Ses réalisations','Viens donc les découvrir ! '];
+var phrases = ['Bonjour à toi, bienvenue sur mon portfolio', 'Tu t\'apprêtes à commencer un voyage', 'À la découverte', 'D\'un homme', 'D\'un geek', 'D\'un développeur ...', 'Son parcours','Ses réalisations','Viens donc les découvrir ! '];
 var el = document.querySelector('.text');
 var fx = new TextScramble(el);
 var counter = 0;
@@ -289,11 +289,15 @@ next();
 
   <body>
 
-    <h1 class="ml7">
-    <span class="text-wrapper">
-      <span class="letters"> Fares CHERIF</span>
-    </span>
-  </h1>
+<div class="moi">
+    <p>
+
+  <span class="name">
+    FARES CHERIF
+  </span>
+  &mdash; IT STUDENT &mdash;
+</p>
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <div class="metier">
@@ -303,7 +307,6 @@ next();
 
   <footer>
     <div class="suivezmoi">
-    <p>Suivez-moi !</p>
     </div>
     <div class="image">
     <a href="https://twitter.com/CherifFares2"><img src="image/twitter.png"></a>

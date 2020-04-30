@@ -401,3 +401,65 @@ body {
   left:70%;
   margin-left: 100px;
 }
+
+.ml7{
+  position: absolute;
+  top: 0%;
+}
+.ml7 h1{
+ font-size: 200px;
+}
+
+
+
+
+
+body {
+  font: 400 1em/1.5 "Neuton";
+  text-align: center;
+}
+
+.moi{
+  margin-top: 85px;
+  color:red;
+  font-family: 'Playfair Display', serif;
+
+}
+.moi p {
+  position: absolute;
+  left:430px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  border: 20px double #0fe4d2;
+  border-color: linear-gradient(#e66465, #9198e5);
+  border-width: 4px 0;
+  padding: 1.5em 0em;
+
+  width: 40em;
+  font-size: 15;
+  margin: 0 0 0 -20em;
+}
+
+.moi p span {
+  font: 700 4em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px #909090;
+  background: url(image/animated_text_fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
