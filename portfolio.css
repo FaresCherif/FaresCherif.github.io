@@ -143,22 +143,26 @@ footer img:hover{
 .lien{
   position: absolute;
   bottom:0px;
-  left : 50%;
+  left : 45%;
 }
 
 .presentation img{
   width:100px;
+  margin-bottom: -21px;
 }
 
 .presentation{
   position: absolute;
-  left:30%;
+  left:25%;
   bottom:0%;
+}
+
+.presentation p{
+  margin-right: -35px;
 }
 
 .realisation img{
   width:100px;
-
 }
 
 
@@ -172,9 +176,12 @@ p{
 .contact{
   position: absolute;
   bottom:35px;
-  right : 75px;
+  right : 15%;
 }
 
+.contact p{
+  margin-right: -15px;
+}
 .contact img{
   width : 10%;
   margin-left: 50px;
@@ -479,5 +486,5 @@ body {
 .test{
   position: absolute;
   bottom:50px;
-  left:50%;
+  left:45%;
 };
