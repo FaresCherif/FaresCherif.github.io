@@ -573,8 +573,8 @@ margin-bottom: 500px;
 }
 
 .presentation img{
-  margin-left: -100px;
-  margin-top: 150px;
+  margin-left: -150px;
+  margin-top: 20px;
   border-radius: 200px;
 
 }
@@ -1235,8 +1235,9 @@ p span::after {
 	 margin: 0.5rem 0 0;
 }
 
-
-
+.imag{
+  margin-left: 1000px;
+}
 .cint{
   position: absolute;
   bottom:-2020px;
@@ -1244,4 +1245,14 @@ p span::after {
   width: 97%;
   background: linear-gradient(to top,#0fe4d2, #202020);
   animation: slideUp 1.5s ease-in-out forwards;
+}
+
+.pho p{
+  margin-left: -55px;
+}
+
+
+.cvo{
+  margin-top: -30px;
+  margin-left: 50px;
 }

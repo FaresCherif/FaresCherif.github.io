@@ -5,7 +5,7 @@
 }
 
 html{
-
+margin-bottom: 40px;
 }
 
 :root {
@@ -394,71 +394,9 @@ figure.snip1477.hover figcaption {
 
 }
 
-.box span:nth-child(1)
-{
-  transform:rotate(0deg);
-  margin-left: -500px;
-  margin-right: 500px;
-}
-
-.box span:nth-child(2)
-{
-  transform:rotate(90deg);
-  margin-top: -500px;
-  margin-left: 125px;
-
-}
-
-.box span:nth-child(3)
-{
-  transform:rotate(180deg);
-  margin-left: 500px;
-  margin-right: 500px;
-}
-
-.box span:nth-child(4)
-{
-  transform:rotate(270deg);
-  margin-top: 300px;
-  margin-left:-125px;
-}
-
-.box span:before
-{
-  content: '';
-  position: absolute;
-  width:100%;
-  height: 4px;
-  background: #50dfdb;
-  animation: animate 4s linear infinite;
-}
-
-@keyframes animate {
-  0% {
-  transform:scaleX(0);
-  transform-origin: left;
-  }
-  50%
-  {
-    transform:scaleX(1);
-  transform-origin: left;
-  }
-  50.1%
-  {
-    transform:scaleX(1);
-  transform-origin: right;
-
-  }
-
-  100%
-  {
-    transform:scaleX(0);
-  transform-origin: right;
-
-  }
 
 
-}
+
 
 
 
