@@ -3,6 +3,7 @@ html{
   background-repeat: no-repeat;
   background-size: 69%;
   background-color: #202020;
+  overflow-y: hidden;
 }
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 html,
@@ -407,7 +408,7 @@ body {
 
 .image{
   position: absolute;
-  bottom: 10px;
+  top: 10px;
   left:70%;
   margin-left: 100px;
 }
@@ -430,7 +431,7 @@ body {
 }
 
 .moi{
-  margin-top: 85px;
+  margin-top: 20%;
   color:red;
   font-family: 'Playfair Display', serif;
 
